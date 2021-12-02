@@ -10,6 +10,6 @@ FROM amazon/aws-cli:latest
 #	rm -rf /var/lib/apt/lists/*
 
 COPY kubernetes.repo /etc/yum.repos.d/kubernetes.repo
-RUN yum install -y kubectl
+RUN yum install -y kubectl && yum clean all
 
 ENTRYPOINT []
